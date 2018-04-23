@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const { users } = require('../assets/users.json'); // { users: [{}, {}] }
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Jirachai Chansivanon' });
@@ -11,22 +13,7 @@ router.get('/my-nick', function(req, res) {
 })
 
 router.get('/users', function(req, res) {
-  const users = [
-    {
-      name: "Jim",
-      age: 12,
-    },
-    {
-      name: "Tom",
-      age: 21,
-    },
-    {
-      name: "John",
-      age: 23,
-    },
-  ]
-  // { users }
-  // { users: users }
+  console.log(users)
   res.render('user/show-all', { users })
 })
 
