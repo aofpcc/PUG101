@@ -1,11 +1,8 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    div
-      each user in users
-        //- { name: 'somthing', age: 12 }
-        h2= user.name
-        h4= user.age
+extends layout
+
+block show_all
+  each user in users
+    div.col-3
+      img(src=user.profile, width="200px")
+      h2= user.name
+      h4= user.age

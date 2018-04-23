@@ -13,7 +13,6 @@ router.get('/my-nick', function(req, res) {
 })
 
 router.get('/users', function(req, res) {
-  console.log(users)
   res.render('user/show-all', { users })
 })
 
