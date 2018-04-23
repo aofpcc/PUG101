@@ -1,8 +1,12 @@
 extends layout
 
 block show_all
-  each user in users
-    div.col-3
-      img(src=user.profile, width="200px")
-      h2= user.name
-      h4= user.age
+  div.row
+    div.col
+      button#btn.btn.btn-primary Click me
+  div.row
+    each user in users
+      div.col-3
+        img(src=user.profile, width="200px")
+        h2= user.name
+        h4= user.age
