@@ -6,4 +6,6 @@ html
   body
     div
       each user in users
-        p= user.name
+        //- { name: 'somthing', age: 12 }
+        h2= user.name
+        h4= user.age
